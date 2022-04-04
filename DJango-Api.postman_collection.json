@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "39b87fcd-5a70-407e-9a8c-1f4c3fad44ee",
+		"name": "DJango-Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var xsrfCookie = postman.getResponseCookie(\"csrftoken\");\r",
+							"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "{{ csrftoken }}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/compa%C3%B1ias/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"compa%C3%B1ias",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Only_one",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var xsrfCookie = postman.getResponseCookie(\"csrftoken\");\r",
+							"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "{{ csrftoken }}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/compa%C3%B1ias/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"compa%C3%B1ias",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Add_web",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "{{ csrftoken }}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Twittar\",\r\n    \"sitioweb\": \"https://twitter.com/\",\r\n    \"fundacion\": 2006\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/compa%C3%B1ias/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"compa%C3%B1ias",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Update_web",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "{{ csrftoken }}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Twitter\",\r\n    \"sitioweb\": \"https://twitter.com.la/\",\r\n    \"fundacion\": 2006\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/compa%C3%B1ias/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"compa%C3%B1ias",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Delete_web",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-CSRFToken",
+						"value": "{{ csrftoken }}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Twitter\",\r\n    \"sitioweb\": \"https://twitter.com.la/\",\r\n    \"fundacion\": 2006\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/compa%C3%B1ias/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"compa%C3%B1ias",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": " csrftoken ",
+			"value": "IQFhlBdEMGkE32Vi4SfTtmJHa6ls88sXI3MBREKyqQOmwJ40s1QUspk4iGErxZoR"
+		}
+	]
+}
